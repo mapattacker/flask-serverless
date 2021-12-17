@@ -11,10 +11,12 @@ custom:
     packRequirements: false
   pythonRequirements:
     dockerizePip: non-linux
+    zip: true
 
 provider:
   name: aws
   runtime: python3.8
+  lambdaHashingVersion: 20201221
   stage: dev
   region: ap-southeast-1
 
