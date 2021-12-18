@@ -1,0 +1,13 @@
+{
+    "dev": {
+        "app_function": "zappa-iris",
+        "aws_region": "ap-southeast-1",
+        "profile_name": "default",
+        "project_name": "project",
+        "runtime": "python3.8",
+        "slim_handler": true,
+        "s3_bucket": "python-serverless-deployment-s3",
+        "manage_roles": false,
+        "role_name": "lambda-dev-ZappaLambdaExecutionRole"
+    }
+}
