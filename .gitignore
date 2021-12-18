@@ -1,6 +1,8 @@
+# serverless framework
 .serverless/
 node_modules
 .requirements.zip
+unzip_requirements.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

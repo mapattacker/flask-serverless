@@ -5,6 +5,7 @@ plugins:
   - serverless-python-requirements
   - serverless-wsgi
 
+# configs for plugins
 custom:
   wsgi:
     app: app.app
@@ -19,10 +20,15 @@ provider:
   lambdaHashingVersion: 20201221
   stage: dev
   region: ap-southeast-1
+  deploymentBucket: python-serverless-deployment-s3
 
 functions:
   app:
     handler: wsgi_handler.handler
     events:
-      - http: ANY /
-      - http: 'ANY {proxy+}'
+      - http: 
+          method: ANY
+          path: /
+      - http:
+          method: ANY
+          path: /{proxy+}
